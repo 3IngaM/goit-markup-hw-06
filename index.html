@@ -221,14 +221,11 @@
 <div class="subscribe-container">
 <p class="subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
 <form>
-    <label>
-    Email
-    <input type="email" name="email" />
+    <label for="user_email"></label>
+    <input type="text" name="email" placeholder="Email"/>
   </label>
    <button type="submit">Подписаться</button>
 </form>
-
-
 </div>
 </div>
 </footer>
@@ -241,5 +238,18 @@
 </div> 
 </div>
 <script src="./js/modal.js"></script>
+<script>
+(() => {
+  document
+  .querySelector('.js-speaker-form')
+  .addEventListener('submit', e => {
+   e.preventDefault();
+  new FormData(e.currentTarget).forEach((value, name)) =>
+  console.log('${name}: ${value}'),
+  );  
+});
+})();
+</script>
 </body>
 </html>
+  

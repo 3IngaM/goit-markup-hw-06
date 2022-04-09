@@ -992,6 +992,7 @@ img {
   fill: #ffffff;
 }
 .subscribe-container {
+position: relative;  
 display: block;
 justify-content: center;
 align-items: center;
@@ -1038,7 +1039,7 @@ label {
  
 }
 
-button {
+button-footer {
   display: inline-flex;
   padding: 12px 32px;
   margin-left: 12px;
@@ -1051,11 +1052,17 @@ button {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-button:hover,
-button:focus {
+button-footer:hover,
+button-footer:focus {
   background-color: #1976d2;
 }
-
+.icon-send {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  margin-right: 10px;
+}
 .backdrop {
   position: fixed;
   top: 0;

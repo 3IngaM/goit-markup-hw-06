@@ -1066,8 +1066,7 @@ button-footer:focus {
   fill: #fff;
   vertical-align: baseline;
   margin-right: 20px;
-  margin-top: -0.3em;
-  margin-bottom: -0.3em;
+  text-align: left;
 }
 .backdrop {
   position: fixed;
@@ -1104,85 +1103,129 @@ transform:translate(-50%, -50%) scale(0.9);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-.modal-close {
-  position: absolute;
-  background-color: #ffffff;
-  width: 30px;
-  height: 30px;
- border-radius: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  transition: transform 250ms ease;
-  }
 
-.icon-close {
-  width: 100%;
-  height: 100%;
+.checkbox-icon {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--secondary-text-color);
+  cursor: pointer;
+  margin-right: 8px;
+  margin-left: 12px;
 }
-.form-container {
+
+.form-checkbox:checked+.checkbox-icon {
+  background-image: url(../images/icons.svg#vector);
+  fill: var(--accent-color);
+}
+
+
+.button:hover {
+  color: ;
+  background: ;
+}
+
+.modal-form .button {
+  margin-top: 30px;
+  margin-left: 124px;
+}
+.modal-icons-wrapper {
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal-icons {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
-  background-color: rgba(33, 33, 33, 0.2);
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  pointer-events: none;
-}
-
-.modal-item {
-position: absolute;
-bottom: 85%;
-left: 85%;
-transform: translate(-85%, -85%);
-color:#212121;
- font-family: Roboto;
- font-style: bold;
- font-size: 20px;
- line-height: 23px;
- letter-spacing: 0.03em;
- width: 448px;
- height: 23px;
- margin: 2px;
- margin-bottom: 12px;
+  left: 12px;
+  transform: translateY(-50%);
+  transition-duration: 250ms;
  }
 
+.modal-btn-close {
+  position: absolute;
+  background: #ffffff;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 250ms ease;
+}
+
+.tittle-modal-form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Roboto;
+  margin: 2px;
+  font-style: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.tittle-modal-form {
+  display: block;
+  text-align: left;
+}
+.tittle-modal-form:not(:last-child) {
+  margin-bottom: 10px;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+  margin: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+}
 
 
-label {
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-input:focus + .contact-form-icon {
+fill: var(--accent-color);
+}
+
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(117, 117, 117, 0.5);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-form-lable {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
-  color: rgba(255, 255, 255, 0.3);
-  width: 47px;
-  height: 20px;
-  top: 2802px;
-  left: 831px;
-  font-family: Roboto;
-  font-style: regular;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-
-}
-input {
-  padding: 8px;
-  font-family: inherit;
-  border-radius: 4px;
-  border: none;
-  width: 448px;
-  height: 40px;
-  top: 314px;
-  left: 576px;
-}
-.icon-person-black{
-  display: inline-block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  fill: var(--accent-color);
-  vertical-align: baseline;
-  margin-right: 20px;
-  margin-top: -0.3em;
-  margin-bottom: -0.3em;
+  margin-bottom: 8px;
 }

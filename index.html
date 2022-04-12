@@ -231,32 +231,44 @@
 </footer>
 <div class="backdrop is-hidden" data-modal>
  <div class="modal">
-<button class="modal-close">
-<svg data-modal-close class="icon-close"><use href="./images/icons.svg#close"></use>
-</svg></button>
-<div class="form-container">
-<p class="modal-item" >Оставьте свои данные, мы вам перезвоним</p>
-<form>
-  <label>
-    Имя
-    <input type="text" name="username"autofocus />
-  </label>
-  <label>
-    Email
-    <input type="email" name="email" />
-  </label>
-  <label>
-    Password
-    <input type="password" name="password" minlength="5" maxlength="12" />
-  </label>
-  <label>
-    Feedback
-    <textarea name="feedback" rows="5" placeholder="Type your message here..."></textarea>
-  </label>
-  <button type="submit">Submit</button>
+   <form class="modal-form">
+<p class="tittle-modal-form">Оставьте свои данные, мы вам перезвоним</p>
+<label class="modal-form-label" for="name">Имя</label>  
+<div class="modal-icons-wrapper">   
+<input type="text" class="modal-form-input" name="user_name" id="name"/>
+<svg class="modal-icons" width="18" heidht="18">
+<use href="./images/icons.svg#person-black"></use></svg>  
+</div>
+  <label class="modal-form-label" for="phone_number">Телефон</label>  
+<div class="modal-icons-wrapper">   
+<input type="tel"  class="modal-form-input" name="user_phone" id="phone_number"/>
+<svg class="modal-icons" width="18" heidht="18">
+<use href="./images/icons.svg#phone-black"></use></svg>  
+</div>
+<label class="modal-form-label" for="email_address">Почта</label> 
+<div class="modal-icons-wrapper">   
+<input type="email" class="modal-form-input" name="user_email" id="email_address"/> 
+<svg class="modal-icons" width="18" heidht="18">
+<use href="./images/icons.svg#email-black"></use></svg>  
+</div>
+<label class="modal-form-label">
+  Комментарий
+<textarea class="modal-textarea" name="comment" id="Введите текст"></textarea>
+</label>
+<div class="modal-checkbox-wrapper">
+<label class="modal-checkbox-label">
+<input type="checkbox" name="accept-policy" class="modal-checkbox" required/>
+<span class="checkbox-icon"></span>
+Соглашусь с рассылкой и принимаю
+<a href="">Условия договора</a>
+</label>
+</div>
+<button type="submit"class="button btn-hover">Отправить</button>
 </form>
 </div>
-</div>
+<button type="button" class="modal-btn-close"data-modal-close>
+<svg  width="11" height="11" ><use href="./images/icons.svg#close"></use>
+</svg></button>
 </div> 
 </div>
 <script src="./js/modal.js"></script>

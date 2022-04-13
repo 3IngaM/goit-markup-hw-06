@@ -220,34 +220,32 @@
 </div>
 <div class="subscribe-container">
 <p class="subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-<form>
-    <label for="user_email"></label>
-    <input type="text" name="email" placeholder="Email"/>
+<label for="user_email"></label>
+    <input type="text" class="subsribe-form-input" name="email" placeholder="E-mail"/>
   </label>
    <button-footer type="submit">Подписаться<svg class="icon-send"><use href="./images/icons.svg#icon-send"></use></svg></button-footer>
-</form>
 </div>
 </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
  <div class="modal">
    <form class="modal-form">
+     <div class="modal-form-wrapper"> 
 <p class="tittle-modal-form">Оставьте свои данные, мы вам перезвоним</p>
-<label class="modal-form-label" for="name">Имя</label>  
-<div class="modal-icons-wrapper">   
-<input type="text" class="modal-form-input" name="user_name" id="name"/>
+<label for="name" class="modal-form-label">Имя</label>  
+ <input type="text" class="modal-form-input" name="name" />
 <svg class="modal-icons" width="18" heidht="18">
 <use href="./images/icons.svg#person-black"></use></svg>  
 </div>
-  <label class="modal-form-label" for="phone_number">Телефон</label>  
-<div class="modal-icons-wrapper">   
+<div class="modal-form-wrapper">   
+  <label for="phone_number" class="modal-form-label">Телефон</label>  
 <input type="tel"  class="modal-form-input" name="user_phone" id="phone_number"/>
 <svg class="modal-icons" width="18" heidht="18">
 <use href="./images/icons.svg#phone-black"></use></svg>  
 </div>
-<label class="modal-form-label" for="email_address">Почта</label> 
-<div class="modal-icons-wrapper">   
-<input type="email" class="modal-form-input" name="user_email" id="email_address"/> 
+<div class="modal-form-wrapper">  
+<label for="mail" class="modal-form-label">Почта</label> 
+ <input type="email" class="modal-form-input" name="mail" id="mail_address"/> 
 <svg class="modal-icons" width="18" heidht="18">
 <use href="./images/icons.svg#email-black"></use></svg>  
 </div>
@@ -255,18 +253,18 @@
   Комментарий
 <textarea class="modal-textarea" name="comment" id="Введите текст"></textarea>
 </label>
-<div class="modal-checkbox-wrapper">
+<form class="modal-form">
 <label class="modal-checkbox-label">
-<input type="checkbox" name="accept-policy" class="modal-checkbox" required/>
-<span class="checkbox-icon"></span>
-Соглашусь с рассылкой и принимаю
+<input class="modal-checkbox" type="checkbox" name="accept-policy"  value="html"/>
+<span class="icon"></span>
+<span>Соглашусь с рассылкой и принимаю</span>
 <a href="">Условия договора</a>
 </label>
-</div>
+</form>
 <button type="submit"class="button btn-hover">Отправить</button>
 </form>
 </div>
-<button type="button" class="modal-btn-close"data-modal-close>
+<button type="button" class="modal-close"data-modal-close>
 <svg  width="11" height="11" ><use href="./images/icons.svg#close"></use>
 </svg></button>
 </div> 

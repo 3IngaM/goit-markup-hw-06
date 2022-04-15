@@ -220,19 +220,22 @@
 </div>
 <div class="subscribe-container">
 <p class="subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-<label for="user_email"></label>
+<form class="subscribe-form">
     <input type="text" class="subsribe-form-input" name="email" placeholder="E-mail"/>
-  </label>
-   <button-footer type="submit">Подписаться<svg class="icon-send"><use href="./images/icons.svg#icon-send"></use></svg></button-footer>
+     <button-footer type="submit">Подписаться<svg class="icon-send"><use href="./images/icons.svg#icon-send"></use></svg></button-footer>
+</form>
 </div>
 </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
  <div class="modal">
+   <button type="button" class="modal-close"data-modal-close>
+<svg class="icon-close" width="11" height="11" ><use href="./images/icons.svg#close"></use>
+</svg></button>
    <form class="modal-form">
-     <div class="modal-form-wrapper"> 
-<p class="tittle-modal-form">Оставьте свои данные, мы вам перезвоним</p>
-<label for="name" class="modal-form-label">Имя</label>  
+  <p class="tittle-modal-form">Оставьте свои данные, мы вам перезвоним</p>
+<div class="modal-form-wrapper">
+   <label for="name" class="modal-form-label">Имя</label>  
  <input type="text" class="modal-form-input" name="name" />
 <svg class="modal-icons" width="18" heidht="18">
 <use href="./images/icons.svg#person-black"></use></svg>  
@@ -248,25 +251,19 @@
  <input type="email" class="modal-form-input" name="mail" id="mail_address"/> 
 <svg class="modal-icons" width="18" heidht="18">
 <use href="./images/icons.svg#email-black"></use></svg>  
-</div>
-<label class="modal-form-label">
-  Комментарий
-<textarea class="modal-textarea" name="comment" id="Введите текст"></textarea>
-</label>
-<form class="modal-form">
+</div>   
+<form class="modal-form-comment">
+  <label class="modal-form-comment-label">Комментарий</label>
+<textarea class="modal-textarea" name="name" id="">Введите текст</textarea>
+   
+<form class="modal-form-checkbox">
 <label class="modal-checkbox-label">
-<input class="modal-checkbox" type="checkbox" name="accept-policy"  value="html"/>
+<input class="modal-checkbox-input" type="checkbox" name="accept-policy"  value="html"/>
 <span class="icon"></span>
-<span>Соглашусь с рассылкой и принимаю</span>
-<a href="">Условия договора</a>
+<span class="distribution" >Соглашусь с рассылкой и принимаю <a class="conditions" href=""> Условия договора</a></span>
 </label>
-</form>
-<button type="submit"class="button btn-hover">Отправить</button>
-</form>
-</div>
-<button type="button" class="modal-close"data-modal-close>
-<svg  width="11" height="11" ><use href="./images/icons.svg#close"></use>
-</svg></button>
+<button type="submit"class="button-checkbox">Отправить</button>
+</form></form>
 </div> 
 </div>
 <script src="./js/modal.js"></script>
